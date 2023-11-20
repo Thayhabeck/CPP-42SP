@@ -1,0 +1,53 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: thabeck- <thabeck-@student.42sp.org.br>    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/11/19 02:51:06 by thabeck-          #+#    #+#              #
+#    Updated: 2023/11/19 19:15:43 by thabeck-         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+NAME	= phonebook
+
+CC		= c++
+CFLAGS	= -Wall -Wextra -Werror -std=c++98
+
+RM		= rm -rf
+
+SRC 	= main.cpp		\
+		Contact.cpp		\
+		PhoneBook.cpp 
+
+OBJ_PATH	= obj/
+OBJ 		= $(addprefix $(OBJ_PATH), $(SRC:.cpp=.o))
+
+CY		= \033[36;1m
+GR		= \033[32;1m
+RE		= \033[31;1m
+RC		= \033[0m
+
+$(OBJ_PATH)%.o:	%.cpp
+	@mkdir -p $(OBJ_PATH)
+	@$(CC) $(CFLAGS) -c $< -o $@
+
+$(NAME): 	$(OBJ)
+	@printf "$(CY)Generating phonebook...$(RC)\n"
+	@$(CC) $(CFLAGS) -o $(NAME) $(OBJ)
+	@printf "$(GR)Done!$(RC)\n"
+
+all:	$(NAME)
+
+re:		fclean all
+
+clean:
+	@$(RM) $(OBJ) $(OBJ_PATH)
+	@printf "$(RE)phonebook objects removed!$(RC)\n"
+
+fclean:		clean
+	@$(RM) $(NAME)
+	@printf "$(RE)phonebook removed!$(RC)\n"
+
+.PHONY:		all clean fclean re
