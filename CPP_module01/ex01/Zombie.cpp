@@ -5,12 +5,18 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: thabeck- <thabeck-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/20 10:55:17 by thabeck-          #+#    #+#             */
-/*   Updated: 2023/11/20 13:56:35 by thabeck-         ###   ########.fr       */
+/*   Created: 2023/11/20 12:45:50 by thabeck-          #+#    #+#             */
+/*   Updated: 2023/11/20 14:10:26 by thabeck-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
+
+//Default constructor
+Zombie::Zombie()
+{
+    std::cout << GREEN << "A new Zombie is alive (or not)" << RESET << std::endl;
+}
 
 //Constructor with name
 Zombie::Zombie( std::string name )
@@ -25,6 +31,12 @@ Zombie::~Zombie()
 {
     std::cout << RED << this->_name;
     std::cout << " is dead (again)" << RESET << std::endl;
+}
+
+//Name setter
+void    Zombie::setName(std::string name)
+{
+    this->_name = name;
 }
 
 //Member function to announce the zombie
