@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Contact.hpp                                        :+:      :+:    :+:   */
+/*   Contacta.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thabeck- <thabeck-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 02:35:20 by thabeck-          #+#    #+#             */
-/*   Updated: 2023/11/20 12:12:48 by thabeck-         ###   ########.fr       */
+/*   Updated: 2023/11/20 12:39:11 by thabeck-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ const std::string BLUE = "\033[36;1m";
 
 class Contact
 {
-    private:
+	private:
 		// Attributes
 		std::string	_firstName;
 		std::string	_lastName;
@@ -33,25 +33,25 @@ class Contact
 		std::string	_phoneNumber;
 		std::string	_darkestSecret;
 
-    public:
-        // Constructor
-        Contact(void);
-        // Destructor
-        ~Contact(void);
-        // Getters
-        std::string	getFirstName(void);
-        std::string	getLastName(void);
-        std::string	getNickname(void);
-        std::string	getPhoneNumber(void);
-        std::string	getDarkestSecret(void);
-        // Setters
-        void		setFirstName(std::string firstName);
-        void		setLastName(std::string lastName);
-        void		setNickname(std::string nickname);
-        void		setPhoneNumber(std::string phoneNumber);
-        void		setDarkestSecret(std::string darkestSecret);
-        // Method
-        void		printContact(void);
+	public:
+		// Constructor
+		Contact(void);
+		// Destructor
+		~Contact(void);
+		// Getters
+		std::string	getFirstName(void);
+		std::string	getLastName(void);
+		std::string	getNickname(void);
+		std::string	getPhoneNumber(void);
+		std::string	getDarkestSecret(void);
+		// Setters
+		void		setFirstName(std::string firstName);
+		void		setLastName(std::string lastName);
+		void		setNickname(std::string nickname);
+		void		setPhoneNumber(std::string phoneNumber);
+		void		setDarkestSecret(std::string darkestSecret);
+		// Method
+		void		printContact(void);
 };
 
 #endif
