@@ -6,7 +6,7 @@
 #    By: thabeck- <thabeck-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/19 19:30:56 by thabeck-          #+#    #+#              #
-#    Updated: 2023/11/19 19:36:27 by thabeck-         ###   ########.fr        #
+#    Updated: 2023/11/22 22:29:32 by thabeck-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ $(OBJ_PATH)%.o:	%.cpp
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME): 	$(OBJ)
-	@printf "$(CY)Generating GlobalBanksters...$(RC)\n"
+	@printf "$(CY)Generating $(NAME)...$(RC)\n"
 	@$(CC) $(CFLAGS) -o $(NAME) $(OBJ)
 	@printf "$(GR)Done!$(RC)\n"
 
@@ -41,11 +41,11 @@ all:	$(NAME)
 
 clean:
 	@$(RM) $(OBJ) $(OBJ_PATH)
-	@printf "$(RE)GlobalBanksters objects removed!$(RC)\n"
+	@printf "$(RE)$(NAME) objects removed!$(RC)\n"
 
 fclean:		clean
 	@$(RM) $(NAME)
-	@printf "$(RE)GlobalBanksters removed!$(RC)\n"
+	@printf "$(RE)$(NAME) removed!$(RC)\n"
 
 re:		fclean all
 

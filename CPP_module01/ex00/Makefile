@@ -6,7 +6,7 @@
 #    By: thabeck- <thabeck-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/20 11:05:09 by thabeck-          #+#    #+#              #
-#    Updated: 2023/11/20 11:08:29 by thabeck-         ###   ########.fr        #
+#    Updated: 2023/11/22 22:29:52 by thabeck-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,7 @@ $(OBJ_PATH)%.o:	%.cpp
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME): 	$(OBJ)
-	@printf "$(CY)Generating zombies...$(RC)\n"
+	@printf "$(CY)Generating $(NAME)...$(RC)\n"
 	@$(CC) $(CFLAGS) -o $(NAME) $(OBJ)
 	@printf "$(GR)Done!$(RC)\n"
 
@@ -45,10 +45,10 @@ re:		fclean all
 
 clean:
 	@$(RM) $(OBJ) $(OBJ_PATH)
-	@printf "$(RE)zombies objects removed!$(RC)\n"
+	@printf "$(RE)$(NAME) objects removed!$(RC)\n"
 
 fclean:		clean
 	@$(RM) $(NAME)
-	@printf "$(RE)zombies removed!$(RC)\n"
+	@printf "$(RE)$(NAME) removed!$(RC)\n"
 
 .PHONY:		all clean fclean re

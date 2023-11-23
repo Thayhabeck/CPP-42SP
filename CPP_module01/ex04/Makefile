@@ -5,36 +5,53 @@
 #                                                     +:+ +:+         +:+      #
 #    By: thabeck- <thabeck-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/11/19 02:34:26 by thabeck-          #+#    #+#              #
-#    Updated: 2023/11/22 22:28:53 by thabeck-         ###   ########.fr        #
+#    Created: 2023/11/21 23:06:34 by thabeck-          #+#    #+#              #
+#    Updated: 2023/11/22 18:35:45 by thabeck-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = megaphone
+NAME	= sedIsForLosers
 
-CC = c++
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CC		= c++
+CFLAGS	= -Wall -Wextra -Werror -std=c++98
 
-SRC = megaphone.cpp
+RM		= rm -rf
+
+SRC 	= main.cpp				\
+		  ReplaceProgram.cpp	\
+		  ReplaceService.cpp
+
+OBJ_PATH	= obj/
+OBJ 		= $(addprefix $(OBJ_PATH), $(SRC:.cpp=.o))
 
 CY		= \033[36;1m
 GR		= \033[32;1m
 RE		= \033[31;1m
 RC		= \033[0m
 
-all: $(NAME)
+$(OBJ_PATH)%.o:	%.cpp
+	@mkdir -p $(OBJ_PATH)
+	@$(CC) $(CFLAGS) -c $< -o $@
 
-$(NAME): $(SRC)
+$(NAME): 	$(OBJ)
 	@printf "$(CY)Generating $(NAME)...$(RC)\n"
-	@$(CC) $(CFLAGS) -o $(NAME) $(SRC)
+	@$(CC) $(CFLAGS) -o $(NAME) $(OBJ)
 	@printf "$(GR)Done!$(RC)\n"
 
+all:	$(NAME)
+
+re:		fclean all
+
+test: $(NAME)
+	@./run_test.sh --no-print-directory
+
 clean:
-	@rm -f $(NAME)
+	@$(RM) $(OBJ) $(OBJ_PATH)
+	@printf "$(RE)$(NAME) objects removed!$(RC)\n"
+
+fclean:		clean
+	@$(RM) $(NAME) Test
+	@printf "$(RE)Test files removed!$(RC)\n"
 	@printf "$(RE)$(NAME) removed!$(RC)\n"
 
-fclean: clean
-
-re: fclean all
-
-.PHONY: all clean fclean re
+.PHONY:		all clean fclean re test

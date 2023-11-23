@@ -6,7 +6,7 @@
 #    By: thabeck- <thabeck-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/20 14:13:07 by thabeck-          #+#    #+#              #
-#    Updated: 2023/11/20 14:21:58 by thabeck-         ###   ########.fr        #
+#    Updated: 2023/11/22 22:30:19 by thabeck-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,13 +25,13 @@ RC		= \033[0m
 all: $(NAME)
 
 $(NAME): $(SRC)
-	@printf "$(CY)Generating thisIsBrain...$(RC)\n"
+	@printf "$(CY)Generating $(NAME)...$(RC)\n"
 	@$(CC) $(CFLAGS) -o $(NAME) $(SRC)
 	@printf "$(GR)Done!$(RC)\n"
 
 clean:
 	@rm -f $(NAME)
-	@printf "$(RE)thisIsBrain removed!$(RC)\n"
+	@printf "$(RE)$(NAME) removed!$(RC)\n"
 
 fclean: clean
 

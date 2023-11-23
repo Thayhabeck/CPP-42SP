@@ -6,7 +6,7 @@
 #    By: thabeck- <thabeck-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/19 02:51:06 by thabeck-          #+#    #+#              #
-#    Updated: 2023/11/19 19:15:43 by thabeck-         ###   ########.fr        #
+#    Updated: 2023/11/22 22:29:12 by thabeck-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,7 @@ $(OBJ_PATH)%.o:	%.cpp
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME): 	$(OBJ)
-	@printf "$(CY)Generating phonebook...$(RC)\n"
+	@printf "$(CY)Generating $(NAME)...$(RC)\n"
 	@$(CC) $(CFLAGS) -o $(NAME) $(OBJ)
 	@printf "$(GR)Done!$(RC)\n"
 
@@ -44,10 +44,10 @@ re:		fclean all
 
 clean:
 	@$(RM) $(OBJ) $(OBJ_PATH)
-	@printf "$(RE)phonebook objects removed!$(RC)\n"
+	@printf "$(RE)$(NAME) objects removed!$(RC)\n"
 
 fclean:		clean
 	@$(RM) $(NAME)
-	@printf "$(RE)phonebook removed!$(RC)\n"
+	@printf "$(RE)$(NAME) removed!$(RC)\n"
 
 .PHONY:		all clean fclean re
