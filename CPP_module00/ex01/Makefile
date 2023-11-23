@@ -6,7 +6,7 @@
 #    By: thabeck- <thabeck-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/19 02:51:06 by thabeck-          #+#    #+#              #
-#    Updated: 2023/11/22 22:29:12 by thabeck-         ###   ########.fr        #
+#    Updated: 2023/11/22 23:51:42 by thabeck-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,9 @@ SRC 	= main.cpp		\
 		Contact.cpp		\
 		PhoneBook.cpp 
 
+INC		= Contact.hpp	\
+		PhoneBook.hpp
+
 OBJ_PATH	= obj/
 OBJ 		= $(addprefix $(OBJ_PATH), $(SRC:.cpp=.o))
 
@@ -33,7 +36,7 @@ $(OBJ_PATH)%.o:	%.cpp
 	@mkdir -p $(OBJ_PATH)
 	@$(CC) $(CFLAGS) -c $< -o $@
 
-$(NAME): 	$(OBJ)
+$(NAME): 	$(OBJ) $(INC)
 	@printf "$(CY)Generating $(NAME)...$(RC)\n"
 	@$(CC) $(CFLAGS) -o $(NAME) $(OBJ)
 	@printf "$(GR)Done!$(RC)\n"

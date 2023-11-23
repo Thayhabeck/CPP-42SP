@@ -6,7 +6,7 @@
 #    By: thabeck- <thabeck-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/21 23:06:34 by thabeck-          #+#    #+#              #
-#    Updated: 2023/11/22 18:35:45 by thabeck-         ###   ########.fr        #
+#    Updated: 2023/11/22 23:49:58 by thabeck-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,9 @@ SRC 	= main.cpp				\
 		  ReplaceProgram.cpp	\
 		  ReplaceService.cpp
 
+INC		= ReplaceProgram.hpp	\
+		  ReplaceService.hpp
+
 OBJ_PATH	= obj/
 OBJ 		= $(addprefix $(OBJ_PATH), $(SRC:.cpp=.o))
 
@@ -33,7 +36,7 @@ $(OBJ_PATH)%.o:	%.cpp
 	@mkdir -p $(OBJ_PATH)
 	@$(CC) $(CFLAGS) -c $< -o $@
 
-$(NAME): 	$(OBJ)
+$(NAME): 	$(OBJ) $(INC)
 	@printf "$(CY)Generating $(NAME)...$(RC)\n"
 	@$(CC) $(CFLAGS) -o $(NAME) $(OBJ)
 	@printf "$(GR)Done!$(RC)\n"

@@ -6,7 +6,7 @@
 #    By: thabeck- <thabeck-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/20 12:46:39 by thabeck-          #+#    #+#              #
-#    Updated: 2023/11/22 22:30:06 by thabeck-         ###   ########.fr        #
+#    Updated: 2023/11/22 23:50:57 by thabeck-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,8 @@ SRC 	= main.cpp		\
 		Zombie.cpp		\
 		zombieHorde.cpp
 
+INC		= Zombie.hpp
+
 OBJ_PATH	= obj/
 OBJ 		= $(addprefix $(OBJ_PATH), $(SRC:.cpp=.o))
 
@@ -33,7 +35,7 @@ $(OBJ_PATH)%.o:	%.cpp
 	@mkdir -p $(OBJ_PATH)
 	@$(CC) $(CFLAGS) -c $< -o $@
 
-$(NAME): 	$(OBJ)
+$(NAME): 	$(OBJ) $(INC)
 	@printf "$(CY)Generating $(NAME)...$(RC)\n"
 	@$(CC) $(CFLAGS) -o $(NAME) $(OBJ)
 	@printf "$(GR)Done!$(RC)\n"

@@ -6,7 +6,7 @@
 #    By: thabeck- <thabeck-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/20 18:04:39 by thabeck-          #+#    #+#              #
-#    Updated: 2023/11/22 22:30:38 by thabeck-         ###   ########.fr        #
+#    Updated: 2023/11/22 23:50:33 by thabeck-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,6 +22,10 @@ SRC 	= main.cpp		\
 		  HumanA.cpp	\
 		  HumanB.cpp
 
+INC		= Weapon.hpp	\
+		  HumanA.hpp	\
+		  HumanB.hpp
+
 OBJ_PATH	= obj/
 OBJ 		= $(addprefix $(OBJ_PATH), $(SRC:.cpp=.o))
 
@@ -34,7 +38,7 @@ $(OBJ_PATH)%.o:	%.cpp
 	@mkdir -p $(OBJ_PATH)
 	@$(CC) $(CFLAGS) -c $< -o $@
 
-$(NAME): 	$(OBJ)
+$(NAME): 	$(OBJ) $(INC)
 	@printf "$(CY)Generating $(NAME)...$(RC)\n"
 	@$(CC) $(CFLAGS) -o $(NAME) $(OBJ)
 	@printf "$(GR)Done!$(RC)\n"

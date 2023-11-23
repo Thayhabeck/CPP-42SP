@@ -5,22 +5,21 @@
 #                                                     +:+ +:+         +:+      #
 #    By: thabeck- <thabeck-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/11/19 19:30:56 by thabeck-          #+#    #+#              #
-#    Updated: 2023/11/22 23:52:12 by thabeck-         ###   ########.fr        #
+#    Created: 2023/11/22 23:18:58 by thabeck-          #+#    #+#              #
+#    Updated: 2023/11/22 23:46:55 by thabeck-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= GlobalBanksters
+NAME	= Harl2
 
 CC		= c++
 CFLAGS	= -Wall -Wextra -Werror -std=c++98
 
 RM		= rm -rf
 
-SRC 	= tests.cpp		\
-		Account.cpp
+SRC 	= Harl.cpp main.cpp
 
-INC		= Account.hpp
+INC		= Harl.hpp
 
 OBJ_PATH	= obj/
 OBJ 		= $(addprefix $(OBJ_PATH), $(SRC:.cpp=.o))
@@ -39,7 +38,9 @@ $(NAME): 	$(OBJ) $(INC)
 	@$(CC) $(CFLAGS) -o $(NAME) $(OBJ)
 	@printf "$(GR)Done!$(RC)\n"
 
-all:	$(NAME)	
+all:	$(NAME)
+
+re:		fclean all
 
 clean:
 	@$(RM) $(OBJ) $(OBJ_PATH)
@@ -48,7 +49,5 @@ clean:
 fclean:		clean
 	@$(RM) $(NAME)
 	@printf "$(RE)$(NAME) removed!$(RC)\n"
-
-re:		fclean all
 
 .PHONY:		all clean fclean re
