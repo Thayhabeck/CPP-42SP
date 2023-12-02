@@ -6,7 +6,7 @@
 /*   By: thabeck- <thabeck-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 18:17:33 by thabeck-          #+#    #+#             */
-/*   Updated: 2023/12/02 19:14:36 by thabeck-         ###   ########.fr       */
+/*   Updated: 2023/12/02 19:07:55 by thabeck-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ ClapTrap::ClapTrap(std::string name) : _name(name), _hitPoints(10), _energyPoint
     std::cout << GREEN;
     std::cout << "ClapTrap '" << this->_name << "' was created with " << this->_hitPoints;
     std::cout << " hit points⚡, " << this->_energyPoints << " energy points🔋 and ";
-    std::cout << this->_attackDamage << " attack damage 🗡️.";
-    std::cout << RESET << std::endl;
+    std::cout << this->_attackDamage << " attack damage 🗡️." << std::endl;
+    std::cout << RESET;
 }
 
 ClapTrap::ClapTrap(ClapTrap const &copy)
