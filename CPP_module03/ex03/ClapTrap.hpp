@@ -6,7 +6,7 @@
 /*   By: thabeck- <thabeck-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 18:15:22 by thabeck-          #+#    #+#             */
-/*   Updated: 2023/12/03 00:18:08 by thabeck-         ###   ########.fr       */
+/*   Updated: 2023/12/03 00:10:52 by thabeck-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,10 @@
 
 #include <string>
 #include <iostream>
+
+#define C_HIT_POINTS 10
+#define C_ENERGY_POINTS 10
+#define C_ATTACK_DAMAGE 0
 
 // Color codes as global variables
 const std::string RESET = "\033[0m";
