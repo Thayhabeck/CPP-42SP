@@ -6,7 +6,7 @@
 /*   By: thabeck- <thabeck-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 18:13:34 by thabeck-          #+#    #+#             */
-/*   Updated: 2023/12/02 23:55:08 by thabeck-         ###   ########.fr       */
+/*   Updated: 2023/12/03 17:34:53 by thabeck-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@
 
 class FragTrap : virtual public ClapTrap
 {
-    private:
     public:
         FragTrap(void);
         FragTrap(std::string name);

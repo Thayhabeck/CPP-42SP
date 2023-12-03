@@ -6,7 +6,7 @@
 /*   By: thabeck- <thabeck-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 16:46:00 by thabeck-          #+#    #+#             */
-/*   Updated: 2023/11/29 18:59:12 by thabeck-         ###   ########.fr       */
+/*   Updated: 2023/12/03 17:36:10 by thabeck-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,8 @@
 
 class ScavTrap : public ClapTrap
 {
-    private:
-        ScavTrap(void);
     public:
+        ScavTrap(void);
         ScavTrap(std::string name);
         ScavTrap(ScavTrap const &copy);
         ~ScavTrap(void);

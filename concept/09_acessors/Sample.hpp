@@ -1,36 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   Sample.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thabeck- <thabeck-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/02 18:13:34 by thabeck-          #+#    #+#             */
-/*   Updated: 2023/12/03 17:35:41 by thabeck-         ###   ########.fr       */
+/*   Created: 2023/11/23 21:09:29 by thabeck-          #+#    #+#             */
+/*   Updated: 2023/11/23 22:05:02 by thabeck-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_HPP
-# define FRAGTRAP_HPP
+#ifndef SAMPLE_HPP
+# define SAMPLE_HPP
 
-#include <string>
 #include <iostream>
-#include "ClapTrap.hpp"
+#include <string>
 
-class FragTrap : public ClapTrap
+class Sample
 {
     public:
-        FragTrap(void);
-        FragTrap(std::string name);
-        FragTrap(FragTrap const &copy);
-        ~FragTrap(void);
-        
-        FragTrap &operator=(FragTrap const &assign);
+        Sample(void);
+        ~Sample(void);
 
-        std::string getName(void);
-        int getAttackDamage(void);
+        // getters and setters são funções que permitem acessar e modificar os atributos de uma classe.
+        // os getters e setters são conhecidos como acessors.
+        int     getFoo(void) const;
+        void    setFoo(int v);
 
-        void    highFivesGuys(void);
+    private:
+        int     _foo;
 };
 
 #endif

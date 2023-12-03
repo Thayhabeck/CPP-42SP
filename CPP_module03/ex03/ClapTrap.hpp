@@ -6,7 +6,7 @@
 /*   By: thabeck- <thabeck-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 18:15:22 by thabeck-          #+#    #+#             */
-/*   Updated: 2023/12/03 00:10:52 by thabeck-         ###   ########.fr       */
+/*   Updated: 2023/12/03 17:34:38 by thabeck-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,14 +39,14 @@ class ClapTrap
         ClapTrap();
         ClapTrap(std::string name);
         ClapTrap(ClapTrap const &copy);
-        virtual ~ClapTrap();
+        ~ClapTrap();
         
         ClapTrap &operator=(ClapTrap const &assign);
 
         std::string getName(void);
         int getAttackDamage(void);
 
-        virtual void attack(std::string const &target);
+        void attack(std::string const &target);
         void takeDamage(unsigned int amount);
         void beRepaired(unsigned int amount);
 };

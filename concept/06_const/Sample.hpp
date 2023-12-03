@@ -1,36 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   Sample.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thabeck- <thabeck-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/02 18:13:34 by thabeck-          #+#    #+#             */
-/*   Updated: 2023/12/03 17:35:41 by thabeck-         ###   ########.fr       */
+/*   Created: 2023/11/19 01:30:17 by thabeck-          #+#    #+#             */
+/*   Updated: 2023/11/19 01:48:49 by thabeck-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_HPP
-# define FRAGTRAP_HPP
+#ifndef SAMPLE_HPP
+# define SAMPLE_HPP
 
-#include <string>
-#include <iostream>
-#include "ClapTrap.hpp"
-
-class FragTrap : public ClapTrap
+class Sample
 {
     public:
-        FragTrap(void);
-        FragTrap(std::string name);
-        FragTrap(FragTrap const &copy);
-        ~FragTrap(void);
         
-        FragTrap &operator=(FragTrap const &assign);
+        // Const indica que o valor não pode ser alterado
+        float const pi;
+        int         qd;
 
-        std::string getName(void);
-        int getAttackDamage(void);
+        Sample(float const f);
+        ~Sample(void);
 
-        void    highFivesGuys(void);
+        void bar(void) const;
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: thabeck- <thabeck-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 19:20:15 by thabeck-          #+#    #+#             */
-/*   Updated: 2023/12/03 00:04:00 by thabeck-         ###   ########.fr       */
+/*   Updated: 2023/12/03 17:35:19 by thabeck-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ class DiamondTrap : public ScavTrap, public FragTrap
 {
     private:
         std::string _name;
+
     public:
         DiamondTrap(void);
         DiamondTrap(std::string name);
