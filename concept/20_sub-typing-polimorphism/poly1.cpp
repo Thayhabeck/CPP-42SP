@@ -6,7 +6,7 @@
 /*   By: thabeck- <thabeck-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 11:38:57 by thabeck-          #+#    #+#             */
-/*   Updated: 2023/12/03 17:28:04 by thabeck-         ###   ########.fr       */
+/*   Updated: 2023/12/03 17:57:12 by thabeck-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,4 +70,4 @@ int main(void)
     return (0);
 }
 
-// c++ -Wall -Wextra -Werror -std=c++98 poly1.cpp -o poly1
+// Para compilar: c++ -Wall -Wextra -Werror -std=c++98 poly1.cpp -o poly1
