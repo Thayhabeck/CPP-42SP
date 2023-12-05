@@ -1,41 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thabeck- <thabeck-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/03 18:16:18 by thabeck-          #+#    #+#             */
-/*   Updated: 2023/12/05 01:01:39 by thabeck-         ###   ########.fr       */
+/*   Created: 2023/12/04 13:28:10 by thabeck-          #+#    #+#             */
+/*   Updated: 2023/12/05 00:25:17 by thabeck-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#ifndef BRAIN_H
+# define BRAIN_H
 
 #include <iostream>
+#include <cmath>
 #include <string>
 
 // Color codes as global variables
-const std::string RESET = "\033[0m";
-const std::string RED = "\033[31;1m";
-const std::string GREEN = "\033[32;1m";
-const std::string BLUE = "\033[36;1m";
+const std::string BRESET = "\033[0m";
+const std::string BRED = "\033[31;1m";
+const std::string BGREEN = "\033[32;1m";
 
-class Animal
+class Brain
 {
-    protected:
-        std::string _type;
-
+    private:
+        std::string _ideas[100];
     public:
-        Animal();
-        Animal(std::string type);
-        Animal(Animal const &copy);
-        Animal &operator=(Animal const &animal);
-        virtual ~Animal();
+        Brain();
+        Brain(Brain const &copy);
+        Brain &operator=(Brain const &brain);
+        ~Brain();
 
-        std::string getType() const;
-        virtual void makeSound() const;
+        std::string getIdea(int i) const;
+        void setIdea(int i, std::string idea);
 };
 
 #endif

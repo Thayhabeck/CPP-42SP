@@ -6,7 +6,7 @@
 /*   By: thabeck- <thabeck-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 18:28:06 by thabeck-          #+#    #+#             */
-/*   Updated: 2023/12/05 01:01:46 by thabeck-         ###   ########.fr       */
+/*   Updated: 2023/12/05 00:44:58 by thabeck-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ Cat::Cat() : Animal("Cat")
     std::cout << GREEN;
     std::cout << "😺 A new Cat was born!" << std::endl;
     std::cout << RESET;
-    this->_type = "Cat";
+    this->_brain = new Brain();
 }
 
 Cat::Cat(Cat const &copy) : Animal(copy)
@@ -25,11 +25,13 @@ Cat::Cat(Cat const &copy) : Animal(copy)
     std::cout << GREEN;
     std::cout << "😺 A new Cat was born by copy!" << std::endl;
     std::cout << RESET;
-    *this = copy;
+    this->_type = copy._type;
+    this->_brain = new Brain(*copy._brain);
 }
 
 Cat::~Cat()
 {
+    delete this->_brain;
     std::cout << RED;
     std::cout << "😺 Cat was destroyed!" << std::endl;
     std::cout << RESET;
@@ -37,7 +39,10 @@ Cat::~Cat()
 
 Cat &Cat::operator=(Cat const &cat)
 {
-    this->_type = cat._type;
+    if (this == &cat)
+		return (*this);
+	this->_type = cat._type;
+	this->_brain = new Brain(*cat._brain);
     return (*this);
 }
 
@@ -48,3 +53,7 @@ void Cat::makeSound() const
     std::cout << RESET;
 }
 
+std::string Cat::getIdea(int i) const
+{
+    return (this->_brain->getIdea(i));
+}

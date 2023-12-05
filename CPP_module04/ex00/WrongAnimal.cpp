@@ -6,7 +6,7 @@
 /*   By: thabeck- <thabeck-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 19:08:17 by thabeck-          #+#    #+#             */
-/*   Updated: 2023/12/03 20:11:15 by thabeck-         ###   ########.fr       */
+/*   Updated: 2023/12/05 01:02:12 by thabeck-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,9 +44,6 @@ WrongAnimal::~WrongAnimal()
 
 WrongAnimal &WrongAnimal::operator=(WrongAnimal const &wronganimal)
 {
-    std::cout << WYELLOW;
-    std::cout << "A new WrongAnimal was born by assignation!" << std::endl;
-    std::cout << WRESET;
     this->_type = wronganimal._type;
     return (*this);
 }

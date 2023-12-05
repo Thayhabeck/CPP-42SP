@@ -6,7 +6,7 @@
 /*   By: thabeck- <thabeck-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 19:11:25 by thabeck-          #+#    #+#             */
-/*   Updated: 2023/12/03 20:11:47 by thabeck-         ###   ########.fr       */
+/*   Updated: 2023/12/05 01:02:57 by thabeck-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,6 @@ WrongCat::~WrongCat()
 
 WrongCat &WrongCat::operator=(WrongCat const &wrongcat)
 {
-    std::cout << WYELLOW;
-    std::cout << "🐱 A new WrongCat was born by assignation!" << std::endl;
-    std::cout << WRESET;
     this->_type = wrongcat._type;
     return (*this);
 }
