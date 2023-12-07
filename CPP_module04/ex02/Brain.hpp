@@ -1,32 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thabeck- <thabeck-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/03 19:04:37 by thabeck-          #+#    #+#             */
-/*   Updated: 2023/12/07 12:47:41 by thabeck-         ###   ########.fr       */
+/*   Created: 2023/12/04 13:28:10 by thabeck-          #+#    #+#             */
+/*   Updated: 2023/12/07 12:34:24 by thabeck-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-# define DOG_HPP
+#ifndef BRAIN_H
+# define BRAIN_H
 
-#include "Animal.hpp"
+#include <iostream>
+#include <cmath>
+#include <string>
 
-class Dog : public Animal
+// Color codes as global variables
+const std::string RESET = "\033[0m";
+const std::string RED = "\033[31;1m";
+const std::string GREEN = "\033[32;1m";
+const std::string BLUE = "\033[36;1m";
+
+class Brain
 {
     private:
-        Brain *_brain;
+        std::string _ideas[100];
     public:
-        Dog();
-        Dog(Dog const &copy);
-        Dog &operator=(Dog const &dog);
-        virtual ~Dog();
+        Brain();
+        Brain(Brain const &copy);
+        Brain &operator=(Brain const &brain);
+        ~Brain();
 
-        virtual void makeSound() const;
         std::string getIdea(int i) const;
+        void setIdea(int i, std::string idea);
 };
 
 #endif

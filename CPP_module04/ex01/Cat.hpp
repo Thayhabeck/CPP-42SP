@@ -6,7 +6,7 @@
 /*   By: thabeck- <thabeck-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 18:26:30 by thabeck-          #+#    #+#             */
-/*   Updated: 2023/12/04 23:54:14 by thabeck-         ###   ########.fr       */
+/*   Updated: 2023/12/07 12:47:34 by thabeck-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define CAT_HPP
 
 #include "Animal.hpp"
-#include "Brain.hpp"
 
 class Cat : public Animal
 {
