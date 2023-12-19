@@ -6,7 +6,7 @@
 /*   By: thabeck- <thabeck-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 01:25:31 by thabeck-          #+#    #+#             */
-/*   Updated: 2023/12/18 17:56:27 by thabeck-         ###   ########.fr       */
+/*   Updated: 2023/12/18 22:18:10 by thabeck-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,11 +74,9 @@ int main()
         bureaucrat.executeForm(form);
         bureaucrat.signForm(form);
         std::cout << form;
-        bureaucrat.executeForm(form);
         bureaucrat.incrementGrade();
         std::cout << bureaucrat;
         bureaucrat.signForm(form);
-        std::cout << form;
         bureaucrat.executeForm(form);
         for (int i = 0; i < 20; i++)
             bureaucrat.incrementGrade();

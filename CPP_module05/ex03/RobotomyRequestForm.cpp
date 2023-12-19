@@ -6,18 +6,18 @@
 /*   By: thabeck- <thabeck-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 01:10:44 by thabeck-          #+#    #+#             */
-/*   Updated: 2023/12/18 22:07:25 by thabeck-         ###   ########.fr       */
+/*   Updated: 2023/12/18 22:23:06 by thabeck-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RobotomyRequestForm.hpp"
 
-RobotomyRequestForm::RobotomyRequestForm(std::string target) : AForm("robotomy request", 72, 45)
+RobotomyRequestForm::RobotomyRequestForm(std::string target) : Form("robotomy request", 72, 45)
 {
     this->_target = target;
 }
 
-RobotomyRequestForm::RobotomyRequestForm(RobotomyRequestForm const &copy) : AForm(copy)
+RobotomyRequestForm::RobotomyRequestForm(RobotomyRequestForm const &copy) : Form(copy)
 {
     *this = copy;
 }
@@ -36,10 +36,10 @@ RobotomyRequestForm &RobotomyRequestForm::operator=(RobotomyRequestForm const &o
 
 void RobotomyRequestForm::execute(Bureaucrat const &executor) const
 {
-    if (!AForm::getSigned())
-        throw AForm::FormNotSignedException();
-    if (executor.getGrade() > AForm::getGradeExec())
-        throw AForm::GradeTooLowException();
+    if (!Form::getSigned())
+        throw Form::FormNotSignedException();
+    if (executor.getGrade() > Form::getGradeExec())
+        throw Form::GradeTooLowException();
     std::cout << BLUE "** drilling noises... **" RESET << std::endl;
     srand(time(0));
     if (rand() % 2)

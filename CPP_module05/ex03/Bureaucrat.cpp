@@ -6,7 +6,7 @@
 /*   By: thabeck- <thabeck-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/10 19:31:13 by thabeck-          #+#    #+#             */
-/*   Updated: 2023/12/18 22:13:47 by thabeck-         ###   ########.fr       */
+/*   Updated: 2023/12/18 19:38:45 by thabeck-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,12 +83,12 @@ void Bureaucrat::decrementGrade()
     }
 }
 
-void Bureaucrat::signForm(AForm &form)
+void Bureaucrat::signForm(Form &form)
 {
     try
     {
         form.beSigned(*this);
-        std::cout << BLUE << this->_name << " signed " <<  form.getName() << RESET << std::endl;
+        std::cout << BLUE << this->_name << " signed " << form.getName() << RESET << std::endl;
     }
     catch (std::exception &e)
     {
@@ -97,7 +97,7 @@ void Bureaucrat::signForm(AForm &form)
     }
 }
 
-void Bureaucrat::executeForm(AForm const &form)
+void Bureaucrat::executeForm(Form const &form)
 {
     try
     {

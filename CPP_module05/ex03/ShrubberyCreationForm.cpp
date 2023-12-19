@@ -6,18 +6,18 @@
 /*   By: thabeck- <thabeck-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 00:44:26 by thabeck-          #+#    #+#             */
-/*   Updated: 2023/12/18 22:07:41 by thabeck-         ###   ########.fr       */
+/*   Updated: 2023/12/18 22:23:17 by thabeck-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ShrubberyCreationForm.hpp"
 
-ShrubberyCreationForm::ShrubberyCreationForm(std::string target) : AForm("shrubbery creation", 145, 137)
+ShrubberyCreationForm::ShrubberyCreationForm(std::string target) : Form("shrubbery creation", 145, 137)
 {
     this->_target = target;
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm(ShrubberyCreationForm const &copy) : AForm(copy)
+ShrubberyCreationForm::ShrubberyCreationForm(ShrubberyCreationForm const &copy) : Form(copy)
 {
     *this = copy;
 }
@@ -36,10 +36,10 @@ ShrubberyCreationForm &ShrubberyCreationForm::operator=(ShrubberyCreationForm co
 
 void ShrubberyCreationForm::execute(Bureaucrat const &executor) const
 {
-    if (!AForm::getSigned())
-        throw AForm::FormNotSignedException();
-    if (executor.getGrade() > AForm::getGradeExec())
-        throw AForm::GradeTooLowException();
+    if (!Form::getSigned())
+        throw Form::FormNotSignedException();
+    if (executor.getGrade() > Form::getGradeExec())
+        throw Form::GradeTooLowException();
     std::ofstream file;
     std::string filename = this->_target + "_shrubbery";
     file.open(filename.c_str());

@@ -6,18 +6,18 @@
 /*   By: thabeck- <thabeck-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 01:15:43 by thabeck-          #+#    #+#             */
-/*   Updated: 2023/12/18 22:07:02 by thabeck-         ###   ########.fr       */
+/*   Updated: 2023/12/18 22:22:54 by thabeck-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PresidentialPardonForm.hpp"
 
-PresidentialPardonForm::PresidentialPardonForm(std::string target) : AForm("presidential pardon", 25, 5)
+PresidentialPardonForm::PresidentialPardonForm(std::string target) : Form("presidential pardon", 25, 5)
 {
     this->_target = target;
 }
 
-PresidentialPardonForm::PresidentialPardonForm(PresidentialPardonForm const &copy) : AForm(copy)
+PresidentialPardonForm::PresidentialPardonForm(PresidentialPardonForm const &copy) : Form(copy)
 {
     *this = copy;
 }
@@ -36,9 +36,9 @@ PresidentialPardonForm &PresidentialPardonForm::operator=(PresidentialPardonForm
 
 void PresidentialPardonForm::execute(Bureaucrat const &executor) const
 {
-    if (!AForm::getSigned())
-        throw AForm::FormNotSignedException();
-    if (executor.getGrade() > AForm::getGradeExec())
-        throw AForm::GradeTooLowException();
+    if (!Form::getSigned())
+        throw Form::FormNotSignedException();
+    if (executor.getGrade() > Form::getGradeExec())
+        throw Form::GradeTooLowException();
     std::cout << BLUE << this->_target << " has been pardoned by Zafod Beeblebrox." RESET << std::endl;
 }

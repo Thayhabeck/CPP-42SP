@@ -6,7 +6,7 @@
 /*   By: thabeck- <thabeck-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/10 19:31:13 by thabeck-          #+#    #+#             */
-/*   Updated: 2023/12/17 00:58:47 by thabeck-         ###   ########.fr       */
+/*   Updated: 2023/12/18 22:10:43 by thabeck-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,9 +87,8 @@ void Bureaucrat::signForm(Form &form)
 {
     try
     {
-        if (form.getSigned())
-            std::cout << YELLOW << this->_name << " cannot sign " << form.getName() << " because ";
         form.beSigned(*this);
+        std::cout << BLUE << this->_name << " signed " << form.getName() << RESET << std::endl;
     }
     catch (std::exception &e)
     {
