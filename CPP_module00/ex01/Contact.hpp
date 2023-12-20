@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Contacta.hpp                                       :+:      :+:    :+:   */
+/*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thabeck- <thabeck-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 02:35:20 by thabeck-          #+#    #+#             */
-/*   Updated: 2023/11/20 12:39:11 by thabeck-         ###   ########.fr       */
+/*   Updated: 2023/12/19 21:44:53 by thabeck-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,11 @@ class Contact
 		// Destructor
 		~Contact(void);
 		// Getters
-		std::string	getFirstName(void);
-		std::string	getLastName(void);
-		std::string	getNickname(void);
-		std::string	getPhoneNumber(void);
-		std::string	getDarkestSecret(void);
+		std::string	getFirstName(void) const;
+		std::string	getLastName(void) const;
+		std::string	getNickname(void) const;
+		std::string	getPhoneNumber(void) const;
+		std::string	getDarkestSecret(void) const;
 		// Setters
 		void		setFirstName(std::string firstName);
 		void		setLastName(std::string lastName);
