@@ -63,8 +63,19 @@ Polimorfismo de subtipagem, classes abstratas e interfaces
 | **Exercício**  | **Conceitos** |
 | :---: | :---: |
 | [ex00](CPP_module04/ex00) | 01, 02, 03, 04, 05, 06, 07, 09, 10, 14, 16, 17, 18, 19, [20](concept/20_sub-typing-polimorphism) |
-| [ex01](CPP_module04/ex01) | 01, 02, 03, 04, 05, 06, 07, 09, 10, 14, 16, 17, 18, 19, 20 |
-| [ex02](CPP_module04/ex02) | 01, 02, 03, 04, 05, 06, 07, 09, 10, 14, 16, 17, 18, 19, 20, [21](concept/21_abstract_classes_and_interfaces) |
-| [ex03](CPP_module04/ex03) | 01, 02, 03, 04, 05, 06, 07, 09, 10, 14, 16, 17, 18, 19, 20, 21 |
+| [ex01](CPP_module04/ex01) | 01, 02, 03, 04, 05, 06, 07, 09, 10, 13, 14, 16, 17, 18, 19, 20 |
+| [ex02](CPP_module04/ex02) | 01, 02, 03, 04, 05, 06, 07, 09, 10, 13, 14, 16, 17, 18, 19, 20, [21](concept/21_abstract_classes_and_interfaces) |
+| [ex03](CPP_module04/ex03) | 01, 02, 03, 04, 05, 06, 07, 09, 10, 13, 14, 16, 17, 18, 19, 20, 21 |
 
 
+## CPP module 04
+Classes aninhadas e exceções
+
+>Conceitos aplicados por exercício
+
+| **Exercício**  | **Conceitos** |
+| :---: | :---: |
+| [ex00](CPP_module05/ex00) | 01, 02, 03, 04, 05, 06, 07, 09, 10, 14, 16, 17, 18, [22](concept/22_nested_classes), [23](concept/23_exceptions) |
+| [ex01](CPP_module05/ex01) | 01, 02, 03, 04, 05, 06, 07, 09, 10, 14, 16, 17, 18, 19, 20 |
+| [ex02](CPP_module05/ex02) | 01, 02, 03, 04, 05, 06, 07, 09, 10, 14, 15, 16, 17, 18, 19, 20, [21](concept/21_abstract_classes_and_interfaces) |
+| [ex03](CPP_module05/ex03) | 01, 02, 03, 04, 05, 06, 07, 09, 10, 14, 15, 16, 17, 18, 19, 20, 21 |
