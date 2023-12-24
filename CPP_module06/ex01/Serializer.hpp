@@ -6,7 +6,7 @@
 /*   By: thabeck- <thabeck-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/23 15:46:24 by thabeck-          #+#    #+#             */
-/*   Updated: 2023/12/23 15:55:19 by thabeck-         ###   ########.fr       */
+/*   Updated: 2023/12/24 16:42:08 by thabeck-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@
 
 // Macros
 # define RESET	"\033[0m"
-# define RED	"\033[31;1m"
-# define BLUE	"\033[36;1m"
 # define YELLOW	"\033[33;1m"
 
 struct Data;

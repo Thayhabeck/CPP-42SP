@@ -6,7 +6,7 @@
 /*   By: thabeck- <thabeck-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/23 15:48:27 by thabeck-          #+#    #+#             */
-/*   Updated: 2023/12/24 01:17:33 by thabeck-         ###   ########.fr       */
+/*   Updated: 2023/12/24 16:42:40 by thabeck-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@
 
 // Macros
 # define RESET	"\033[0m"
+# define GREEN	"\033[32;1m"
 # define RED	"\033[31;1m"
 # define BLUE	"\033[36;1m"
-# define YELLOW	"\033[33;1m"
 
 struct Data {
     private:
@@ -35,16 +35,11 @@ struct Data {
         Data(Data const &copy);
         Data &operator=(Data const &rhs);
 
-        // Getters
-        std::string getdataString(void) const;
-        int getdataNumber(void) const;
+        std::string getDataString(void) const;
+        int getDataNumber(void) const;
 
-        // Setters
-        void setdataString(std::string private_data);
-        void setdataNumber(int private_number);
-
-        // Methods
-        void printData(void);
+        void setDataString(std::string private_data);
+        void setDataNumber(int private_number);
 };
 
 #endif

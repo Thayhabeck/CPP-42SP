@@ -6,7 +6,7 @@
 /*   By: thabeck- <thabeck-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/23 15:54:30 by thabeck-          #+#    #+#             */
-/*   Updated: 2023/12/23 15:57:27 by thabeck-         ###   ########.fr       */
+/*   Updated: 2023/12/24 16:41:58 by thabeck-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,12 @@ Serializer &Serializer::operator=(Serializer const &rhs)
 
 uintptr_t Serializer::serialize(Data *ptr)
 {
+    std::cout << YELLOW << "Serializing data..." << RESET << std::endl;
     return (reinterpret_cast<uintptr_t>(ptr));
 }
 
 Data *Serializer::deserialize(uintptr_t raw)
 {
+    std::cout << YELLOW << "Deserializing data..." << RESET << std::endl;
     return (reinterpret_cast<Data *>(raw));
 }
