@@ -6,7 +6,7 @@
 /*   By: thabeck- <thabeck-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 17:49:12 by thabeck-          #+#    #+#             */
-/*   Updated: 2023/12/23 14:16:45 by thabeck-         ###   ########.fr       */
+/*   Updated: 2023/12/23 17:10:55 by thabeck-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ class ScalarConverter
         static int _typeLiteral;
 
         static bool defineType(std::string str);
+        static bool checkInt(std::string str, int &j);
 
         static void convertChar();
         static void convertInt();

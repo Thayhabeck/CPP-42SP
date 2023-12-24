@@ -6,7 +6,7 @@
 #    By: thabeck- <thabeck-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/29 13:51:09 by thabeck-          #+#    #+#              #
-#    Updated: 2023/12/23 13:31:02 by thabeck-         ###   ########.fr        #
+#    Updated: 2023/12/24 01:19:20 by thabeck-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,6 +39,9 @@ $(NAME): 	$(OBJ) $(INC)
 	@printf "$(GR)Done!$(RC)\n"
 
 all:	$(NAME)
+
+test: $(NAME)
+	@./run_test.sh
 
 re:		fclean all
 

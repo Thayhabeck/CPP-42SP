@@ -6,7 +6,7 @@
 /*   By: thabeck- <thabeck-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/22 19:47:27 by thabeck-          #+#    #+#             */
-/*   Updated: 2023/12/23 14:49:15 by thabeck-         ###   ########.fr       */
+/*   Updated: 2023/12/23 17:12:08 by thabeck-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,6 @@ bool ScalarConverter::defineType(std::string str)
 {
     int i = 0;
     int j = 0;
-    int k = 0;
 
     while (i < 6)
     {
@@ -84,23 +83,41 @@ bool ScalarConverter::defineType(std::string str)
     }
     if (str[0] == '+' || str[0] == '-')
         j++;
+    if (checkInt(str, j))
+        return true;
+    return false;
+}
+
+bool ScalarConverter::checkInt(std::string str, int &j)
+{
+    int dot = 0;
+
     while (j < (int)str.length())
     {
         if (str[j] == '.')
-            k++;
-        if (k > 1 || (!isdigit(str[j]) && str[j] != '.' && (j != (int)str.length() - 1 || str[j] != 'f')))
+            dot++;
+        if (dot > 1 || (!isdigit(str[j]) && str[j] != '.' && (j != (int)str.length() - 1 || str[j] != 'f')))
         {
             std::cout << RED << "Error: invalid parameter" << RESET << std::endl;
             return true;
         }
         j++;
     }
-    if (k == 0)
-        _typeLiteral = (str[str.length() - 1] == 'f') ? FLOAT : INT;
-    else if (k == 1)
+    if (dot == 0)
+    {
+        if (str[str.length() - 1] == 'f')
+        {
+            std::cout << RED << "Error: invalid parameter" << RESET << std::endl;
+            return true;
+        }
+        else
+            _typeLiteral = INT;
+    }
+    else if (dot == 1)
         _typeLiteral = (str[str.length() - 1] == 'f') ? FLOAT : DOUBLE;
     return false;
 }
+
 
 void ScalarConverter::printPseudo()
 {
