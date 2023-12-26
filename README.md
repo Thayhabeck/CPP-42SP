@@ -79,3 +79,15 @@ Classes aninhadas e exceções
 | [ex01](CPP_module05/ex01) | 01, 02, 03, 04, 05, 06, 07, 09, 10, 14, 16, 17, 18, 22, 23 |
 | [ex02](CPP_module05/ex02) | 01, 02, 03, 04, 05, 06, 07, 09, 10, 13, 14, 16, 17, 18, 19, 20, 21, 22, 23 |
 | [ex03](CPP_module05/ex03) | 01, 02, 03, 04, 05, 06, 07, 09, 10, 13, 14, 16, 17, 18, 19, 20, 21, 22, 23 |
+
+
+## CPP module 06
+C++ Casts
+
+>Conceitos aplicados por exercício
+
+| **Exercício**  | **Conceitos** |
+| :---: | :---: |
+| [ex00](CPP_module06/ex00) | 01, 02, 03, 04, 05, 06, 07, 10, 11, 14, 17, 18, [26](concept/26_static_cast) |
+| [ex01](CPP_module06/ex01) | 01, 02, 03, 04, 05, 06, 07, [08](concept/08_classes_vs_structs), 10, 11, 14, 17, 18, [28](concept/28_reinterpret_cast) |
+| [ex02](CPP_module06/ex02) | 01, 02, 11, 14, 19, [27](concept/27_dynamic_cast) |
