@@ -6,7 +6,7 @@
 /*   By: thabeck- <thabeck-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/24 16:47:45 by thabeck-          #+#    #+#             */
-/*   Updated: 2023/12/25 21:32:53 by thabeck-         ###   ########.fr       */
+/*   Updated: 2023/12/27 10:38:48 by thabeck-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <iostream>
 # include <string>
-# include <ctime>
 # include <cstdlib>
 
 // Macros
