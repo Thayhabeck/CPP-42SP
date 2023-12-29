@@ -6,7 +6,7 @@
 /*   By: thabeck- <thabeck-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 02:15:05 by thabeck-          #+#    #+#             */
-/*   Updated: 2023/11/20 12:06:52 by thabeck-         ###   ########.fr       */
+/*   Updated: 2023/12/27 17:50:02 by thabeck-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,10 @@ int main(int argc, char **argv)
 			j = 0;
 			while (argv[i][j])
 			{
-				str = str + (char)std::toupper(argv[i][j]);
+				str += (char)std::toupper(argv[i][j]);
 				j++;
 			}
+			str += ' ';
 			i++;
 		}
 	}

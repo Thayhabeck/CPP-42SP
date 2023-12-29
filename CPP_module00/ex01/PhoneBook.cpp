@@ -6,7 +6,7 @@
 /*   By: thabeck- <thabeck-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 02:44:52 by thabeck-          #+#    #+#             */
-/*   Updated: 2023/11/19 18:26:13 by thabeck-         ###   ########.fr       */
+/*   Updated: 2023/12/27 19:39:43 by thabeck-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,15 +81,15 @@ void	PhoneBook::searchContact(void)
 		{
 			std::cout << std::setw(10) << i << "|";
 			if (this->_contacts[i].getFirstName().length() > 10)
-				std::cout << std::setw(10) << this->_contacts[i].getFirstName().substr(0, 8) << ".|";
+				std::cout << std::setw(9) << this->_contacts[i].getFirstName().substr(0, 8) << ".|";
 			else
 				std::cout << std::setw(10) << this->_contacts[i].getFirstName() << "|";
 			if (this->_contacts[i].getLastName().length() > 10)
-				std::cout << std::setw(10) << this->_contacts[i].getLastName().substr(0, 8) << ".|";
+				std::cout << std::setw(9) << this->_contacts[i].getLastName().substr(0, 8) << ".|";
 			else
 				std::cout << std::setw(10) << this->_contacts[i].getLastName() << "|";
 			if (this->_contacts[i].getNickname().length() > 10)
-				std::cout << std::setw(10) << this->_contacts[i].getNickname().substr(0, 8) << ".|";
+				std::cout << std::setw(10) << this->_contacts[i].getNickname().substr(0, 8) << std::endl;
 			else
 				std::cout << std::setw(10) << this->_contacts[i].getNickname() << std::endl;
 			i++;

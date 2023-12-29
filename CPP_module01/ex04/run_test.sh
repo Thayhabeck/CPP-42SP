@@ -6,7 +6,7 @@
 #    By: thabeck- <thabeck-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/22 16:40:26 by thabeck-          #+#    #+#              #
-#    Updated: 2023/11/22 18:32:47 by thabeck-         ###   ########.fr        #
+#    Updated: 2023/12/27 21:09:17 by thabeck-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,18 +32,18 @@ mkdir -p Test
 
 # Create Test files_______________________________________________________________
 
-echo "${blue}------------------- SED IS FOR LOSERS TEST --------------------"
-echo "---------------------------------------------------------------"
-echo "Creating test files..."
-echo "---------------------------------------------------------------"
-echo "emptyFile.test..."
-echo "aleatory.test..."
-echo "multipleMatches.test..."
-echo "noMatches.test..."
-echo "oneMatchPerLine.test..."
-echo "numbers.test..."
-echo "specialChars.test..."
-echo "---------------------------------------------------------------"
+echo -e "${blue}------------------- SED IS FOR LOSERS TEST --------------------"
+echo -e "---------------------------------------------------------------"
+echo -e "Creating test files..."
+echo -e "---------------------------------------------------------------"
+echo -e "emptyFile.test..."
+echo -e "aleatory.test..."
+echo -e "multipleMatches.test..."
+echo -e "noMatches.test..."
+echo -e "oneMatchPerLine.test..."
+echo -e "numbers.test..."
+echo -e "specialChars.test..."
+echo -e "---------------------------------------------------------------"
 
 # Create empty file
 touch ./Test/emptyFile.test
@@ -142,220 +142,220 @@ sed 's/</___\"\n*\n\"___/g' ./Test/specialChars.test > ./Test/specialChars.test.
 
 # Run tests_______________________________________________________________________
 
-echo "Running tests..."
-echo "---------------------------------------------------------------"
+echo -e "Running tests..."
+echo -e "---------------------------------------------------------------"
 
 # Test 1
-echo "--------------------------- Test 1 ----------------------------"
-echo "Test for file with no matches for <string_to_find>..."
-echo "---------------------------------------------------------------"
-echo "./sedIsForLosers Test/noMatches.test tempo amor"
-echo "---------------------------------------------------------------"
+echo -e "--------------------------- Test 1 ----------------------------"
+echo -e "Test for file with no matches for <string_to_find>..."
+echo -e "---------------------------------------------------------------"
+echo -e "./sedIsForLosers Test/noMatches.test tempo amor"
+echo -e "---------------------------------------------------------------"
 ./sedIsForLosers Test/noMatches.test tempo amor
-echo "${blue}---------------------------------------------------------------"
+echo -e "${blue}---------------------------------------------------------------"
 if [ $? -eq 0 ]; then
 	diff_output=$(diff Test/noMatches.test.result Test/noMatches.test.replace)
 	if [ -z "$diff_output" ]; then
-		echo "${green}Passed${reset}"
+		echo -e "${green}Passed${reset}"
 	else
-		echo "${red}Failed${reset}"
+		echo -e "${red}Failed${reset}"
 	fi
 fi
-echo "${blue}---------------------------------------------------------------"
+echo -e "${blue}---------------------------------------------------------------"
 
 # Test 2
-echo "--------------------------- Test 2 ----------------------------"
-echo "Test for file with one match per line..."
-echo "---------------------------------------------------------------"
-echo "./sedIsForLosers Test/oneMatchPerLine.test Amor Tempo"
-echo "---------------------------------------------------------------"
+echo -e "--------------------------- Test 2 ----------------------------"
+echo -e "Test for file with one match per line..."
+echo -e "---------------------------------------------------------------"
+echo -e "./sedIsForLosers Test/oneMatchPerLine.test Amor Tempo"
+echo -e "---------------------------------------------------------------"
 ./sedIsForLosers Test/oneMatchPerLine.test Amor Tempo
-echo "${blue}---------------------------------------------------------------"
+echo -e "${blue}---------------------------------------------------------------"
 if [ $? -eq 0 ]; then
 	diff_output=$(diff Test/oneMatchPerLine.test.result Test/oneMatchPerLine.test.replace)
 	if [ -z "$diff_output" ]; then
-		echo "${green}Passed${reset}"
+		echo -e "${green}Passed${reset}"
 	else
-		echo "${red}Failed${reset}"
+		echo -e "${red}Failed${reset}"
 	fi
 fi
-echo "${blue}---------------------------------------------------------------"
+echo -e "${blue}---------------------------------------------------------------"
 
 # Test 3
-echo "--------------------------- Test 3 ----------------------------"
-echo "Test for file with multiple matches for <string_to_find>..."
-echo "---------------------------------------------------------------"
-echo "./sedIsForLosers Test/multipleMatches.test tempo amor"
-echo "---------------------------------------------------------------"
+echo -e "--------------------------- Test 3 ----------------------------"
+echo -e "Test for file with multiple matches for <string_to_find>..."
+echo -e "---------------------------------------------------------------"
+echo -e "./sedIsForLosers Test/multipleMatches.test tempo amor"
+echo -e "---------------------------------------------------------------"
 ./sedIsForLosers Test/multipleMatches.test tempo amor
-echo "${blue}---------------------------------------------------------------"
+echo -e "${blue}---------------------------------------------------------------"
 if [ $? -eq 0 ]; then
 	diff_output=$(diff Test/multipleMatches.test.result Test/multipleMatches.test.replace)
 	if [ -z "$diff_output" ]; then
-		echo "${green}Passed${reset}"
+		echo -e "${green}Passed${reset}"
 	else
-		echo "${red}Failed${reset}"
+		echo -e "${red}Failed${reset}"
 	fi
 fi
-echo "${blue}---------------------------------------------------------------"
+echo -e "${blue}---------------------------------------------------------------"
 
 # Test 4
-echo "--------------------------- Test 4 ----------------------------"
-echo "Test for file with aleatory text..."
-echo "---------------------------------------------------------------"
-echo "./sedIsForLosers Test/aleatory.test Thayná ${AVAL}"
-echo "---------------------------------------------------------------"
+echo -e "--------------------------- Test 4 ----------------------------"
+echo -e "Test for file with aleatory text..."
+echo -e "---------------------------------------------------------------"
+echo -e "./sedIsForLosers Test/aleatory.test Thayná ${AVAL}"
+echo -e "---------------------------------------------------------------"
 ./sedIsForLosers Test/aleatory.test Thayná "${AVAL}"
-echo "${blue}---------------------------------------------------------------"
+echo -e "${blue}---------------------------------------------------------------"
 if [ $? -eq 0 ]; then
 	diff_output=$(diff Test/aleatory.test.result Test/aleatory.test.replace)
 	if [ -z "$diff_output" ]; then
-		echo "${green}Passed${reset}"
+		echo -e "${green}Passed${reset}"
 	else
-		echo "${red}Failed${reset}"
+		echo -e "${red}Failed${reset}"
 	fi
 fi
-echo "${blue}---------------------------------------------------------------"
+echo -e "${blue}---------------------------------------------------------------"
 
 # Test 5
-echo "--------------------------- Test 5 ----------------------------"
-echo "Test for file with numbers..."
-echo "---------------------------------------------------------------"
-echo "./sedIsForLosers Test/numbers.test 5 Z"
+echo -e "--------------------------- Test 5 ----------------------------"
+echo -e "Test for file with numbers..."
+echo -e "---------------------------------------------------------------"
+echo -e "./sedIsForLosers Test/numbers.test 5 Z"
 ./sedIsForLosers Test/numbers.test 5 Z
-echo "${blue}---------------------------------------------------------------"
+echo -e "${blue}---------------------------------------------------------------"
 if [ $? -eq 0 ]; then
 	diff_output=$(diff Test/numbers.test.result Test/numbers.test.replace)
 	if [ -z "$diff_output" ]; then
-		echo "${green}Passed${reset}"
+		echo -e "${green}Passed${reset}"
 	else
-		echo "${red}Failed${reset}"
+		echo -e "${red}Failed${reset}"
 	fi
 fi
-echo "${blue}---------------------------------------------------------------"
+echo -e "${blue}---------------------------------------------------------------"
 
 # Test 6
-echo "--------------------------- Test 6 ----------------------------"
-echo "Test for file with special characters..."
-echo "---------------------------------------------------------------"
-echo "./sedIsForLosers Test/specialChars.test \"<\" \"___\"
+echo -e "--------------------------- Test 6 ----------------------------"
+echo -e "Test for file with special characters..."
+echo -e "---------------------------------------------------------------"
+echo -e "./sedIsForLosers Test/specialChars.test \"<\" \"___\"
 *
 \"___\""
-echo "---------------------------------------------------------------"
+echo -e "---------------------------------------------------------------"
 ./sedIsForLosers Test/specialChars.test "<" "___\"
 *
 \"___"
-echo "${blue}---------------------------------------------------------------"
+echo -e "${blue}---------------------------------------------------------------"
 if [ $? -eq 0 ]; then
 	diff_output=$(diff Test/specialChars.test.result Test/specialChars.test.replace)
 	if [ -z "$diff_output" ]; then
-		echo "${green}Passed${reset}"
+		echo -e "${green}Passed${reset}"
 	else
-		echo "${red}Failed${reset}"
+		echo -e "${red}Failed${reset}"
 	fi
 fi
-echo "${blue}---------------------------------------------------------------"
+echo -e "${blue}---------------------------------------------------------------"
 
 # Test 7
-echo "--------------------------- Test 7 ----------------------------"
-echo "Test for empty file..."
-echo "---------------------------------------------------------------"
-echo "./sedIsForLosers Test/emptyFile.test 5 Z"
-echo "---------------------------------------------------------------"
+echo -e "--------------------------- Test 7 ----------------------------"
+echo -e "Test for empty file..."
+echo -e "---------------------------------------------------------------"
+echo -e "./sedIsForLosers Test/emptyFile.test 5 Z"
+echo -e "---------------------------------------------------------------"
 echo "[31;1mError: Input file is empty[0m" > ./Test/error1.test
 ./sedIsForLosers Test/emptyFile.test 5 Z > ./Test/error1.output
 ./sedIsForLosers Test/emptyFile.test 5 Z
-echo "${blue}---------------------------------------------------------------"
+echo -e "${blue}---------------------------------------------------------------"
 if [ $? -eq 0 ]; then
 	diff_output=$(diff Test/error1.test Test/error1.output)
 	if [ -z "$diff_output" ]; then
-		echo "${green}Passed${reset}"
+		echo -e "${green}Passed${reset}"
 	else
-		echo "${red}Failed${reset}"
+		echo -e "${red}Failed${reset}"
 	fi
 fi
-echo "${blue}---------------------------------------------------------------"
+echo -e "${blue}---------------------------------------------------------------"
 
 # Test 8
-echo "--------------------------- Test 8 ----------------------------"
-echo "Test for invalid number of arguments (too few)..."
-echo "---------------------------------------------------------------"
-echo "./sedIsForLosers Test/aleatory.test Thayná"
-echo "---------------------------------------------------------------"
+echo -e "--------------------------- Test 8 ----------------------------"
+echo -e "Test for invalid number of arguments (too few)..."
+echo -e "---------------------------------------------------------------"
+echo -e "./sedIsForLosers Test/aleatory.test Thayná"
+echo -e "---------------------------------------------------------------"
 echo "[31;1mError: Invalid number of arguments
 Usage: ./sedIsForLosers <filename> <string_to_find> <string_to_replace>[0m" > ./Test/error2.test
 ./sedIsForLosers Test/aleatory.test Thayná > ./Test/error2.output
 ./sedIsForLosers Test/aleatory.test Thayná
-echo "${blue}---------------------------------------------------------------"
+echo -e "${blue}---------------------------------------------------------------"
 if [ $? -eq 0 ]; then
 	diff_output=$(diff Test/error2.test Test/error2.output)
 	if [ -z "$diff_output" ]; then
-		echo "${green}Passed${reset}"
+		echo -e "${green}Passed${reset}"
 	else
-		echo "${red}Failed${reset}"
+		echo -e "${red}Failed${reset}"
 	fi
 fi
-echo "${blue}---------------------------------------------------------------"
+echo -e "${blue}---------------------------------------------------------------"
 
 # Test 9
-echo "--------------------------- Test 9 ----------------------------"
-echo "Test for invalid number of arguments (too many)..."
-echo "---------------------------------------------------------------"
-echo "./sedIsForLosers Test/aleatory.test Thayná ${AVAL} ${AVAL}"
-echo "---------------------------------------------------------------"
+echo -e "--------------------------- Test 9 ----------------------------"
+echo -e "Test for invalid number of arguments (too many)..."
+echo -e "---------------------------------------------------------------"
+echo -e "./sedIsForLosers Test/aleatory.test Thayná ${AVAL} ${AVAL}"
+echo -e "---------------------------------------------------------------"
 echo "[31;1mError: Invalid number of arguments
 Usage: ./sedIsForLosers <filename> <string_to_find> <string_to_replace>[0m" > ./Test/error3.test
 ./sedIsForLosers Test/aleatory.test Thayná $AVAL $AVAL > ./Test/error3.output
 ./sedIsForLosers Test/aleatory.test Thayná $AVAL $AVAL
-echo "${blue}---------------------------------------------------------------"
+echo -e "${blue}---------------------------------------------------------------"
 if [ $? -eq 0 ]; then
 	diff_output=$(diff Test/error3.test Test/error3.output)
 	if [ -z "$diff_output" ]; then
-		echo "${green}Passed${reset}"
+		echo -e "${green}Passed${reset}"
 	else
-		echo "${red}Failed${reset}"
+		echo -e "${red}Failed${reset}"
 	fi
 fi
-echo "${blue}---------------------------------------------------------------"
+echo -e "${blue}---------------------------------------------------------------"
 
 # Test 10
-echo "--------------------------- Test 10 ----------------------------"
-echo "Test for invalid file..."
-echo "---------------------------------------------------------------"
-echo "./sedIsForLosers Test/invalidFile.test Thayná ${AVAL}"
-echo "---------------------------------------------------------------"
+echo -e "--------------------------- Test 10 ---------------------------"
+echo -e "Test for invalid file..."
+echo -e "---------------------------------------------------------------"
+echo -e "./sedIsForLosers Test/invalidFile.test Thayná ${AVAL}"
+echo -e "---------------------------------------------------------------"
 echo "[31;1mError: Input file not found[0m" > ./Test/error4.test
 ./sedIsForLosers Test/invalidFile.test Thayná $AVAL > ./Test/error4.output
 ./sedIsForLosers Test/invalidFile.test Thayná $AVAL
-echo "${blue}---------------------------------------------------------------"
+echo -e "${blue}---------------------------------------------------------------"
 if [ $? -eq 0 ]; then
 	diff_output=$(diff Test/error4.test Test/error4.output)
 	if [ -z "$diff_output" ]; then
-		echo "${green}Passed${reset}"
+		echo -e "${green}Passed${reset}"
 	else
-		echo "${red}Failed${reset}"
+		echo -e "${red}Failed${reset}"
 	fi
 fi
-echo "${blue}---------------------------------------------------------------"
+echo -e "${blue}---------------------------------------------------------------"
 
 # Test 11
-echo "--------------------------- Test 11 ----------------------------"
-echo "Test for empty <string_to_find>..."
-echo "---------------------------------------------------------------"
-echo "./sedIsForLosers Test/aleatory.test \"\" Thayná"
-echo "---------------------------------------------------------------"
+echo -e "--------------------------- Test 11 ---------------------------"
+echo -e "Test for empty <string_to_find>..."
+echo -e "---------------------------------------------------------------"
+echo -e "./sedIsForLosers Test/aleatory.test \"\" Thayná"
+echo -e "---------------------------------------------------------------"
 echo "[31;1mError: Empty string <string_to_find>.[0m" > ./Test/error5.test
 ./sedIsForLosers Test/aleatory.test "" Thayná > ./Test/error5.output
 ./sedIsForLosers Test/aleatory.test "" Thayná
-echo "${blue}---------------------------------------------------------------"
+echo -e "${blue}---------------------------------------------------------------"
 if [ $? -eq 0 ]; then
 	diff_output=$(diff Test/error5.test Test/error5.output)
 	if [ -z "$diff_output" ]; then
-		echo "${green}Passed${reset}"
+		echo -e "${green}Passed${reset}"
 	else
-		echo "${red}Failed${reset}"
+		echo -e "${red}Failed${reset}"
 	fi
 fi
-echo "${blue}---------------------------------------------------------------"
-echo "Tests finished..."
-echo "---------------------------------------------------------------${reset}"
+echo -e "${blue}---------------------------------------------------------------"
+echo -e "Tests finished..."
+echo -e "---------------------------------------------------------------${reset}"

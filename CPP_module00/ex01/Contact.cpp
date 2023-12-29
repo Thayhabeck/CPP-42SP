@@ -6,7 +6,7 @@
 /*   By: thabeck- <thabeck-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 02:39:35 by thabeck-          #+#    #+#             */
-/*   Updated: 2023/11/19 19:05:08 by thabeck-         ###   ########.fr       */
+/*   Updated: 2023/12/27 17:51:37 by thabeck-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,27 +25,27 @@ Contact::~Contact(void)
 }
 
 // Getters
-std::string	Contact::getFirstName(void)
+std::string	Contact::getFirstName(void) const
 {
 	return (this->_firstName);
 }
 
-std::string	Contact::getLastName(void)
+std::string	Contact::getLastName(void) const
 {
 	return (this->_lastName);
 }
 
-std::string	Contact::getNickname(void)
+std::string	Contact::getNickname(void) const
 {
 	return (this->_nickname);
 }
 
-std::string	Contact::getPhoneNumber(void)
+std::string	Contact::getPhoneNumber(void) const
 {
 	return (this->_phoneNumber);
 }
 
-std::string	Contact::getDarkestSecret(void)
+std::string	Contact::getDarkestSecret(void) const
 {
 	return (this->_darkestSecret);
 }
