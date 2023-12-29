@@ -4,6 +4,10 @@ _Piscina da 42SP para aprendizado imersivo da linguagem c++_
 ## CPP module 00
 Conceitos básicos da linguagem
 
+![image](https://github.com/Thayhabeck/CPP-42SP/assets/83835069/0f0dda19-b6c9-4f5e-a2cb-391a7fdcc977)
+
+
+
 >Conceitos aplicados por exercício
 
 | **Exercício**  | **Conceitos** |
@@ -15,6 +19,9 @@ Conceitos básicos da linguagem
 
 ## CPP module 01
 Alocação de memória, ponteiros para funções, referências
+
+![image](https://github.com/Thayhabeck/CPP-42SP/assets/83835069/abb4ebaf-ba7b-4b3c-80c6-c69e01490366)
+
 
 >Conceitos aplicados por exercício
 
