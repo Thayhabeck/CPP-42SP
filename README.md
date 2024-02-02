@@ -133,9 +133,6 @@ C++ Templates
 ## CPP module 08
 STL (Standard Template Library)
 
-![image](https://github.com/Thayhabeck/CPP-42SP/assets/83835069/abb4ebaf-ba7b-4b3c-80c6-c69e01490366)
-
-
 >Conceitos aplicados por exercício
 
 | **Exercício**  | **Conceitos** |
