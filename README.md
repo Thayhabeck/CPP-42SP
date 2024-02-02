@@ -39,6 +39,9 @@ Alocação de memória, ponteiros para funções, referências
 ## CPP module 02
 Sobrecarga de Operador, Classe canônica e polimprfismo ad-hoc
 
+![image](https://github.com/Thayhabeck/CPP-42SP/assets/83835069/abb4ebaf-ba7b-4b3c-80c6-c69e01490366)
+
+
 >Conceitos aplicados por exercício
 
 | **Exercício**  | **Conceitos** |
@@ -51,6 +54,9 @@ Sobrecarga de Operador, Classe canônica e polimprfismo ad-hoc
 
 ## CPP module 03
 Herança
+
+![image](https://github.com/Thayhabeck/CPP-42SP/assets/83835069/abb4ebaf-ba7b-4b3c-80c6-c69e01490366)
+
 
 >Conceitos aplicados por exercício
 
@@ -65,6 +71,9 @@ Herança
 ## CPP module 04
 Polimorfismo de subtipagem, classes abstratas e interfaces
 
+![image](https://github.com/Thayhabeck/CPP-42SP/assets/83835069/abb4ebaf-ba7b-4b3c-80c6-c69e01490366)
+
+
 >Conceitos aplicados por exercício
 
 | **Exercício**  | **Conceitos** |
@@ -77,6 +86,9 @@ Polimorfismo de subtipagem, classes abstratas e interfaces
 
 ## CPP module 05
 Classes aninhadas e exceções
+
+![image](https://github.com/Thayhabeck/CPP-42SP/assets/83835069/abb4ebaf-ba7b-4b3c-80c6-c69e01490366)
+
 
 >Conceitos aplicados por exercício
 
@@ -91,6 +103,9 @@ Classes aninhadas e exceções
 ## CPP module 06
 C++ Casts
 
+![image](https://github.com/Thayhabeck/CPP-42SP/assets/83835069/abb4ebaf-ba7b-4b3c-80c6-c69e01490366)
+
+
 >Conceitos aplicados por exercício
 
 | **Exercício**  | **Conceitos** |
@@ -103,10 +118,28 @@ C++ Casts
 ## CPP module 07
 C++ Templates
 
+![image](https://github.com/Thayhabeck/CPP-42SP/assets/83835069/abb4ebaf-ba7b-4b3c-80c6-c69e01490366)
+
+
 >Conceitos aplicados por exercício
 
 | **Exercício**  | **Conceitos** |
 | :---: | :---: |
-| [ex00](CPP_module06/ex00) | 01, [33](concept/33_templates) |
-| [ex01](CPP_module06/ex01) | 01, 33 |
-| [ex02](CPP_module06/ex02) | 01, 02, 03, 04, 05, 06, 07, 10, 13, 17, 18, 22, 23, 26, 33 |
+| [ex00](CPP_module07/ex00) | 01, [33](concept/33_templates) |
+| [ex01](CPP_module07/ex01) | 01, 33 |
+| [ex02](CPP_module07/ex02) | 01, 02, 03, 04, 05, 06, 07, 10, 13, 17, 18, 22, 23, 26, 33 |
+
+
+## CPP module 08
+STL (Standard Template Library)
+
+![image](https://github.com/Thayhabeck/CPP-42SP/assets/83835069/abb4ebaf-ba7b-4b3c-80c6-c69e01490366)
+
+
+>Conceitos aplicados por exercício
+
+| **Exercício**  | **Conceitos** |
+| :---: | :---: |
+| [ex00](CPP_module08/ex00) | 01, 23, 33, [36](concept/36_STL), [37](concept/37_STL_containers), [38](concept/38_STL_algorithms), [39](concept/39_STL_iterators) |
+| [ex01](CPP_module08/ex01) | 01, 02, 03, 04, 05, 06, 07, 10, 13, 17, 18, 22, 23, 26, 33, 36, 37, 38, 39 |
+| [ex02](CPP_module08/ex02) | 01, 02, 03, 04, 05, 06, 07, 10, 13, 17, 18, 22, 23, 26, 33, 36, 37, 38, 39 |
