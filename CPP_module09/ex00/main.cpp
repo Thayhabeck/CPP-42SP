@@ -6,7 +6,7 @@
 /*   By: thabeck- <thabeck-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/03 23:11:29 by thabeck-          #+#    #+#             */
-/*   Updated: 2024/01/03 23:26:53 by thabeck-         ###   ########.fr       */
+/*   Updated: 2024/02/04 13:53:23 by thabeck-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,12 @@ int main(int argc, char **argv) {
         std::cerr << RED "Error: invalid number of arguments." RESET << std::endl;
         return (1);
     } else {
-        BitcoinExchange exchange;
-        exchange.readInput(argv[1]);     
+        try {
+            BitcoinExchange exchange;
+            exchange.readInput(argv[1]);  
+        } catch (std::exception &e) {
+            std::cerr << RED "Error: " << e.what() << RESET << std::endl;
+        }   
     }
     return (0);
 }
