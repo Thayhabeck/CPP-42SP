@@ -6,7 +6,7 @@
 /*   By: thabeck- <thabeck-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 18:20:19 by thabeck-          #+#    #+#             */
-/*   Updated: 2023/12/03 19:03:29 by thabeck-         ###   ########.fr       */
+/*   Updated: 2024/02/01 19:15:23 by thabeck-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ Animal::~Animal()
 
 Animal &Animal::operator=(Animal const &animal)
 {
-    std::cout << YELLOW;
+    std::cout << GREEN;
     std::cout << "A new Animal was born by assignation!" << std::endl;
     std::cout << RESET;
     this->_type = animal._type;
