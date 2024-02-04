@@ -6,7 +6,7 @@
 /*   By: thabeck- <thabeck-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/01 19:26:33 by thabeck-          #+#    #+#             */
-/*   Updated: 2024/02/04 13:26:21 by thabeck-         ###   ########.fr       */
+/*   Updated: 2024/02/04 13:33:06 by thabeck-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@
 # define YELLOW	"\033[33;1m"
 
 # define ARG_ERR		RED "Error: invalid arguments\nUsage: ./PmergeMe [number1] [number2] [number3] ..." RESET
-# define ONLYNBR_ERR	RED "Error: Only positive integers can be process" RESET
-# define CHAR_ERR		RED "Error: Cannot process characters" RESET
+# define ONLYNBR_ERR	RED "Error: invalid arguments\nOnly positive integers can be process" RESET
+# define CHAR_ERR		RED "Error: invalid arguments\nCannot process characters" RESET
 class PmergeMe
 {
 private:
