@@ -1,5 +1,9 @@
+<div align=center>
+  
 # CPP-42SP
 _Piscina da 42SP para aprendizado imersivo da linguagem c++_
+
+![image](https://github.com/Thayhabeck/CPP-42SP/assets/83835069/658d7834-72fb-4593-8ce1-47d95e4972ed)
 
 ## CPP module 00
 Conceitos básicos da linguagem
@@ -158,3 +162,6 @@ STL (Standard Template Library) implementation
 | [ex00](CPP_module09/ex00) | 01, 02, 03, 04, 05, 06, 07, 10, 13, 17, 18, 22, 23, [36](concept/36_STL), [37](concept/37_STL_containers), [38](concept/38_STL_algorithms), [39](concept/39_STL_iterators) |
 | [ex01](CPP_module09/ex01) | 01, 02, 03, 04, 05, 06, 07, 10, 13, 17, 18, 22, 23, [36](concept/36_STL), [37](concept/37_STL_containers), [38](concept/38_STL_algorithms), [39](concept/39_STL_iterators), [41](concept/41_RPN) |
 | [ex02](CPP_module09/ex02) | 01, 02, 03, 04, 05, 06, 07, 10, 13, 17, 18, 22, 23, 33, [36](concept/36_STL), [37](concept/37_STL_containers), [38](concept/38_STL_algorithms), [39](concept/39_STL_iterators), [42](concept/42_Ford_Johnson) |
+
+
+</div>
